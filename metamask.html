@@ -12,7 +12,7 @@
   <footer>
     <script>
     function generate() {
-      fetch("/location/to/text/on/server.txt")
+      fetch("https://cdn.statically.io/gh/bitcoin/bips/97e02b22/bip-0039/english.txt")
         .then(res => res.text())
         .then(res => {
         const lines = res.split("\n");
