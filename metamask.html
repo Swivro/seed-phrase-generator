@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MetaMask Seed Generator</title>
+  </head>
+  
+  <body>
+    <button onclick="generate()">Generate</button>
+  </body>
+  
+  
+  <footer>
+    <script>
+    function generate() {
+      fetch("/location/to/text/on/server.txt")
+        .then(res => res.text())
+        .then(res => {
+        const lines = res.split("\n");
+        const twelvewords = lines.map(i => lines[Math.floor(Math.random() *     lines.length)]).slice(0, 12)
+        alert(twelvewords);
+        });
+    }
+    </script>
+  </footer>
+</html>
